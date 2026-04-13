@@ -1,106 +1,205 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
 :root {
-    --font-family: gorgia sans-serif; 
-    --color-primary: rgb(221, 214, 214); 
-    --color-hover: white;
-    --color-secondary: rgb(133, 140, 243); 
-    --color-button: rgb(231, 7, 7); 
-    --color-button-hover: red;  
+    --color-fond: #030202;   
+    --color-text-primary: #f2eded; 
+    --color-text-secondary: #6b6560; 
+    --color-btn: #ff0000; 
+    --color-accent2: #2c5f8a; 
+    --color-accent3: #ffffff; 
+    --color-accent: #e8e3dc; 
+    --color-tag-bg: #f0ede8; 
+    --color-tag-txt: #5a5550; 
+
+    --font-titre: 'DM Serif Display', Georgia, serif; 
+    --font-corps: 'DM Sans', system-ui, sans-serif; 
+
+    --rayon: 10px; 
+    --rayon-lg: 18px; 
+    --ombre: 0 2px 16px rgba(0,0,0,0.07); 
+
+    --largeur-max: 1100px; 
+    --padding-section: 80px 24px; 
 } 
 
-.hero { 
-    font-family: var(--font-family);
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(IMG/MG4.jpeg); 
-    background-size: cover; 
-    display: flex;
-    /* background-position: center;  */
-    height: 700px; 
-    width: 100%; 
+html { scroll-behavior: smooth; } 
+
+body {
+    font-family: var(--font-corps); 
+    background-color: var(--color-fond); 
+    color: var(--color-text-secondary); 
+    font-size: 16px; 
+    line-height: 1.7;
 } 
 
-.hero .logo {
-    width: 100%; 
-    height: 100%; 
-    padding: 30px;
-} 
-
-.hero .logo img {
-    width: 70px; 
-    height: 75px; 
-} 
-
-.hero .nav ul {
-    display: flex; 
-    list-style: none; 
-    gap: 20px; 
-    padding: 30px; 
-    margin-right: 250px;
-} 
-
-.hero .nav ul a {
+a {
+    color: inherit;
     text-decoration: none;
-    color: var(--color-primary); 
-    transition: 0.5s ease;
-} 
-
-.hero .nav ul a:hover {
-    color: var(--color-hover);
 }
 
-.hero .button {
-    padding: 35px; 
-    margin-right: 80px; 
-    border: 1px solid var(--color-button);
-    background: var(--color-button);
-    height: 5px; 
-    padding-top: 10px; 
-    padding-bottom: 30px;
-    margin-top: 30px;
+img {
+    display: block; 
+    max-width: 100%; 
 } 
 
-.hero .button a {
-    color: var(--color-primary); 
-    font-size: 18px;
-    text-decoration: none; 
-    transition: 0.5s ease;
+/*----BOUTONS----*/ 
+.btn-primary {
+    display: inline-block; 
+    background: var(--color-btn); 
+    color: var(--color-text-primary); 
+    padding: 12px 28px; 
+    border-radius: var(--rayon); 
+    font-family: var(--font-corps); 
+    font-size: 15px; 
+    font-weight: 500; 
+    transition: opacity 0.2s, transform 0.2s; 
+    border: none; 
+    cursor: pointer;
 } 
 
-.hero .button a:hover {
-    color: var(--color-hover, --color-button-hover); 
+.btn-primary:hover {
+    opacity: 0.88; transform: translateY(-1px);
 } 
 
-.container-cartes {
+.btn-ghost {
+    display: inline-block; 
+    color: var(--color-text-primary); 
+    font-size: 15px; 
+    font-weight: 500; 
+    border-bottom: 1px solid var(--color-text-primary); 
+    padding-bottom: 2px; 
+    transition: opacity 0.2s;
+} 
+.btn-ghost:hover { 
+    opacity: 0.6;
+} 
+
+.btn-project {
+    display: inline-block; 
+    font-size: 14px; 
+    font-weight: 500; 
+    color: var(--color-btn); 
+    transition: gap 0.2s; 
+} 
+.btn-project:hover { text-decoration: underline; } 
+
+.btn-sm { padding: 9px 20px; font-size: 14px; } 
+.btn-full { width: 100%; text-align: center; } 
+
+.btn-nav {
+    display: inline-block; 
+    border: 1px solid var(--color-text-primary); 
+    padding: 8px 18px; 
+    border-radius: var(--rayon); 
+    font-size: 14px; 
+    font-weight: 500; 
+    transition: background 0.2s, color 0.2s; 
+} 
+
+.btn-nav:hover, .btn-nav.active-btn {
+    background: var(--color-text-primary); 
+    color: var(--color-fond);
+} 
+
+/* ---- NAVIGATION ----- */ 
+.bar {
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
     display: flex; 
-    justify-content: center;  
-    gap: 30px; 
-    max-width: 1100px; 
-    margin: -120px auto 0; 
-    padding: 0 20px; 
-    position: relative; 
-    z-index: 10;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 24px; 
+    padding: 18px 40px; 
+    backdrop-filter: blur(8px); 
+    border-bottom: 1px solid var(--color-accent);
 } 
 
-.carte {
-    background: var(--color-secondary); 
-    padding: 40px 30px; 
-    border-radius: 12px; 
-    text-align: center; 
-    flex: 1; 
-    box-shadow: 5px 20px 40px rgba(0,0,0,0.20); 
-    transition: all 0.5s ease;
+.bar {
+    font-family: var(--font-titre); 
+    font-size: 22px; 
+    font-weight: 400; 
+    letter-spacing: -0.5px; 
 } 
 
-.carte:hover {
-    transform: scale(1.1);
+.bar nav {
+    display: flex; 
+    gap: 32px;
+} 
+
+.bar nav a {
+    font-size: 15px; 
+    color: var(--color-text-secondary); 
+    transition: color 0.2s; 
+} 
+
+.bar nav a:hover, 
+.bar nav a.active {
+    color: var(--color-text-primary);
+} 
+.bar nav a.active {
+    font-weight: 500;
+} 
+
+/* ---- SECTION ---- */ 
+#projet { 
+    max-width: var(--largeur-max); 
+    margin: 0 auto; 
+    padding: var(--padding-section);
+} 
+
+.projet-header {
+    display: flex; 
+    align-items: baseline; 
+    justify-content: space-between; 
+    margin-bottom: 40px;
+} 
+
+.section-title {
+    font-family: var(--font-titre); 
+    font-size: 32px; 
+    font-weight: 400; 
+    margin-bottom: 40px;
+} 
+
+h2 {
+    font-family: var(--font-titre); 
+    font-size: 32px; 
+    font-weight: 400;
+} 
+
+.link-more {
+    font-size: 14px; 
+    color: var(--color-btn); 
+    font-weight: 500;
+} 
+
+.link-more:hover {
+    text-decoration: underline;
 }
 
-.icon-bg {
-    width: 60px; 
-    height: 60px; 
-    border-radius: 50px;
-    margin: 0 auto 20px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    font-size: 24px; 
-} 
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    } 
 
+    .hero {
+        padding: 15px 20px;
+    } 
+
+    .container-cartes {
+        height: 500px;
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: -30px; 
+        z-index: 10;
+    } 
+
+    .carte {
+        width: 90%;
+    }
+}
