@@ -18,6 +18,7 @@
 
     --font-titre: 'DM Serif Display', Georgia, serif; 
     --font-corps: 'DM Sans', system-ui, sans-serif; 
+    --font-contact: 'Playfair Display', serif; font-style: italic; font-weight: 400; 
 
     --rayon: 10px; 
     --rayon-lg: 18px; 
@@ -348,18 +349,61 @@ h2 {
 }
 .stat-label { font-size: 13px; color: var(--couleur-texte-secondary); margin-top: 4px; } 
 
-#contact{}
+/* ---- CONTACT (accueil) ---- */
+#contact{} 
 
-.cta-section {
-  height: 300px;
-  text-align: center;
-  padding-top: 70px;
+.contact-footer {
+    padding: 60px 10%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    font-family: var(--font-titre); 
+    color: var(--color-text-primary);
 }
-.cta-section h2 { margin-bottom: 12px; }
-.cta-section p  { color: var(--color-text-secondary); margin-bottom: 28px; } 
 
+.contact-info h2 { font-size: 2rem; margin-bottom: 5px; }
+.contact-info .subtile  { font-size: 1.5rem; margin-bottom: 40px; font-weight: 300; }   
 
+.contact-details a {
+    font-family: var(--font-contact);
+    font-size: italic; 
+    font-weight: 500;
+} 
 
+.social-icons { 
+    margin-top: 20px; 
+    display: flex;  
+    gap: 30px;
+}
+
+.social-icons img { 
+    margin-right: 20px; 
+    width: 30px; 
+    height: 30px;
+} 
+
+.lettre h3 {
+    font-family: var(--font-contact); 
+    font-size: 1.5rem; 
+    font-weight: 300; 
+    margin-bottom: 20px;
+    color: var(--color-text-primary);
+} 
+
+.lettre form {
+    display: flex; 
+    flex-direction: column; 
+    width: 350px; 
+} 
+
+.lettre input { 
+    background: transparent; 
+    border: 1px solid var(--color-accent); 
+    padding: 15px; 
+    color: var(--color-text-primary); 
+    margin-bottom: 15px;
+} 
+/* ---- interieur accueil ---- */
 .page-hero {
   max-width: var(--largeur-max);
   margin: 0 auto;
@@ -406,7 +450,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 28px 40px;
-  border-top: 1px solid var(--color-accent);
   font-size: 14px;
   color: var(--couleur-texte-doux);
   max-width: 100%;
