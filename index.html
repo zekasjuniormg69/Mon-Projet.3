@@ -21,7 +21,7 @@
             <a href="#index" class="active">Accueil</a>
             <a href="#propos">À Propos</a>
             <a href="#projet">Projets</a>
-            <a href="contact">Contact</a>
+            <a href="#contact">Contact</a>
         </nav>
          
         <a href="contact.html" class="btn-nav">
@@ -29,112 +29,122 @@
         </a>
     </header> 
 
-    <section class="hero">
+    <section id="index">
 
-        <h1 class="hero-text">
+        <div class="hero">
+            <h1 class="hero-text">
             Je crée des <br>
             <em>exprériences web</em> <br> 
             mémorables.
-        </h1> 
+            </h1> 
 
-        <p class="hero-sub"> 
-            Développeur front-end & designer UI basé à Ottawa. Je transforme vvos idées en interfaces élégantes et fonctionnelles.
-        </p> 
+            <p class="hero-sub"> 
+                Développeur front-end & designer UI basé à Ottawa. Je transforme vvos idées en interfaces élégantes et fonctionnelles.
+            </p> 
 
-        <div class="hero-cat">
-            <a href="projet.html" class="btn-primary">
-                Voir mes projets
-            </a> 
-            <a href="propos.html" class="btn-ghost">
-                En savoir plus →
-            </a>
-        </div> 
+            <div class="hero-cat">
+                <a href="projet.html" class="btn-primary">
+                    Voir mes projets
+                </a> 
+                <a href="propos.html" class="btn-ghost">
+                    En savoir plus →
+                </a>
+            </div>  
+            <div class="hero-scroll">↓ défiler</div> 
+        </div>
 
-        <div class="hero-scroll">↓ défiler</div> 
     </section>  
 
     <!-- ==== À propos ==== -->
     <secttion id="propos">
-        <div class="about-strip-text">
-            <h2>Quelques mots sur moi</h2> 
-            <p>Passionée par l'intersection du design et du code, je suis développeur front-end avec 2ans d'exprérience. J'aime créer des interfaces qui sont à la fois belles et accessibles.</p> 
-            <a href="propos.html" class="btn-ghost">En savoir plus de moi →</a>
-        </div> 
+        <div class="section about-strip">
+            <div class="about-strip-text">
+                <h2>Quelques mots sur moi</h2> 
+                <p>Passionée par l'intersection du design et du code, je suis développeur front-end avec 2ans d'exprérience. J'aime créer des interfaces qui sont à la fois belles et accessibles.</p> 
+                <a href="propos.html" class="btn-ghost">En savoir plus de moi →</a>
+           </div> 
 
-        <div class="about-strip">
-            <div class="stat">
-                <span class="stat-num">4</span> 
-                <span class="label">Projets réalisés</span>
-            </div>
-            <div class="stat">
-                <span class="stat-num">2</span> 
-                <span class="label">Clients satisfaits</span>
-            </div>
-            <div class="stat">
-                <span class="stat-num">2 ans</span> 
-                <span class="label">D'exprérience</span>
-            </div>
+            <!-- <div class="about-strip">
+                <div class="stat">
+                    <span class="stat-num">4</span> 
+                    <span class="label">Projets réalisés</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">2</span> 
+                    <span class="label">Clients satisfaits</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">2 ans</span> 
+                    <span class="label">D'exprérience</span>
+                </div>
+            </div> -->
         </div>
     </secttion>
 
     <!-- ==== PROJETS ==== --> 
     <section id="projet">
-        <div class="projet-header"> 
-            <h2>Projets récents</h2> 
-            <a href="projet.html" class="link-more">Tous mes projet →</a>
-        </div> 
-        <div class="projects-grid">
 
-            <article class="project-card">
-                
-                <div class="project-img project-img--2">
-                    <div class="project-img-placeholder">
-                        <span class="placeholder-icon">🛍️</span>
-                        <span class="placeholder-label">Image du projet</span>
+        <div class="section">
+            <div class="section-header"> 
+                <h2>Projets récents</h2> 
+                <a href="projet.html" class="link-more">Tous mes projet →</a>
+            </div> 
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    
+                    <div class="project-img project-img--1">
+                        <div class="project-img-placeholder">
+                            <span class="placeholder-icon">🛍️</span>
+                            <span class="placeholder-label">Image du projet</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JS</span>
-                    </div> 
-                    <h3>Site e-commerce</h3> 
-                    <p>Boutique en ligne avec panier dynamique et animations fluides.</p> 
-                    <a href="projet.html">Voir →</a>
-                </div>
-
-            </article>
-
-            <article class="project-card">
-
-                <div class="project-img project-img--3">
-                    <div class="project-img-placeholder">
-                        <span class="placeholder-icon">📊</span>
-                        <span class="placeholder-label">Image du projet</span>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JS</span>
+                        </div> 
+                        <h3>Site e-commerce</h3> 
+                        <p>Boutique en ligne avec panier dynamique et animations fluides.</p> 
+                        <a href="projet.html">Voir →</a>
                     </div>
-                </div>
 
-                <div class="project-info">
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JS</span>
-                    </div> 
-                    <h3>Site e-commerce</h3> 
-                    <p>Boutique en ligne avec panier dynamique et animations fluides.</p> 
-                    <a href="projet.html">Voir →</a>
-                </div>
+                </article>
 
-            </article>
+                <article class="project-card">
+
+                    <div class="project-img project-img--2">
+                        <div class="project-img-placeholder">
+                            <span class="placeholder-icon">📊</span>
+                            <span class="placeholder-label">Image du projet</span>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JS</span>
+                        </div> 
+                        <h3>Site e-commerce</h3> 
+                        <p>Boutique en ligne avec panier dynamique et animations fluides.</p> 
+                        <a href="projet.html">Voir →</a>
+                    </div>
+
+                </article>
+            </div>
         </div>
     </section> 
 
 
     <!-- ==== CONTACT ==== -->
     <section id="contact">
-        <h2>Un projet en tête ?</h2> 
-        <p>Je suis disponible pour des mission freelance et des collaboration. Parlons de votre projet !!</p> 
-        <a href="contact.html" class="btn-primary">Prendre contact</a>
+        <div class="contact cta-section">
+            <h2>Un projet en tête ?</h2> 
+            <p>Je suis disponible pour des mission freelance et des collaboration. Parlons de votre projet !!</p> 
+            <a href="contact.html" class="btn-primary">Prendre contact</a>
+        </div>
     </section>
 
     <!-- ==== FOOTER ==== --> 
