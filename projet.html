@@ -3,28 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="projet.css"> 
     <link rel="icon" type="incon/png" href="IMG/MGP.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
     <title>Gloire.KUBEMBULA</title> 
 </head>
 <body>
-    <header class="hero"> 
+    <header class="bar"> 
 
         <a href="index.html" class="logo">
             Gloire.KUBEMBULA 
         </a> 
 
         <nav>
-            <a href="#index">Accueil</a>
-            <a href="#propos">À Propos</a>
-            <a href="#projet">Projets</a>
+            <a href="index.html">Accueil</a>
+            <a href="propos.html">À Propos</a>
+            <a href="#" class="active">Projets</a>
             <a href="contact">Contact</a>
         </nav>
          
         <a href="contact.html" class="btn-nav">
             Me contacter
         </a>
-    </header>
+    </header> 
+
+    <!-- ==== Tête de page ==== -->
+    <section class="page-hero"> 
+        <h1>Mes <em class="em">projets</em></h1> 
+        <p>Une sélection de mes réalisation récentes - du design à la mise en ligne.</p>
+    </section> 
+
+    <section class="section">
+        <div class="filters">
+            <button class="filter-btn active">Tous</button>
+            <button class="filter-btn">Web</button>
+            <button class="filter-btn">Design</button>
+            <button class="filter-btn">Application</button>
+        </div> 
+
+        <!-- === GRILLES PROJETS === --> 
+        <div class="projects-full-grid"> 
+
+            <article class="project-full-card">
+                <div class="pfull-img pfull-img--1"> 
+                    <div class="project-img-placeholder">
+                        <span class="placeholder-icon">🛍️</span>
+                        <span class="placeholder-label">Capture d'écran du projet</span>
+                        <img src="IMG/com.png" alt="" class="placeholder-img">
+                    </div> 
+                    <span class="pfull-category">E-commerce</span>
+                </div> 
+
+                <div class="pfull-body">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS Module</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3>Bontique en ligne - G-Kub</h3> 
+                    <p>Boutique en ligne avec panier dynamique et animations fluides</p> 
+                    <div class="pfull-links">
+                        <a href="#" class="btn-primary btn-sm">Voir le site →</a> 
+                        <a href="#" class="btn-ghost btn-sm">Code source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-full-card">
+                <div class="pfull-img pfull-img--2"> 
+                    <div class="project-img-placeholder">
+                        <span class="placeholder-icon">📱</span>
+                        <span class="placeholder-label">Capture d'écran du projet</span>
+                        <img src="IMG/port.png" alt="" class="placeholder-img">
+                    </div> 
+                    <span class="pfull-category">Portfolio</span>
+                </div> 
+
+                <div class="pfull-body">
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">TailwindCSS</span>
+                        <span class="tag">Firebase</span>
+                    </div>
+                    <h3>Portfolio professionnel</h3> 
+                    <p>Un portfolio moderne pour présenter mes compétences et mes réalisations.</p> 
+                    <div class="pfull-links">
+                        <a href="#" class="btn-primary btn-sm">Voir le site →</a> 
+                        <a href="#" class="btn-ghost btn-sm">Code source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-full-card">
+                <div class="pfull-img pfull-img--3"> 
+                    <div class="project-img-placeholder">
+                        <span class="placeholder-icon">📷</span>
+                        <span class="placeholder-label">Capture d'écran du projet</span>
+                        <img src="IMG/pot-fo.png" alt="" class="placeholder-img">
+                    </div> 
+                    <span class="pfull-category">Portfolio-photo</span>
+                </div> 
+
+                <div class="pfull-body">
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS Modules</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3>Site de presentation photo</h3> 
+                    <p>Plateforme vitrine permettant aux photographes de présenter leurs œuvres de manière élégante tout en simplifiant la gestion de leur clientèle.</p> 
+                    <div class="pfull-links">
+                        <a href="#" class="btn-primary btn-sm">Voir le site →</a> 
+                        <a href="#" class="btn-ghost btn-sm">Code source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-full-card">
+                <div class="pfull-img pfull-img--4"> 
+                    <div class="project-img-placeholder">
+                        <span class="placeholder-icon">🏋🏽‍♀️</span>
+                        <span class="placeholder-label">Capture d'écran du projet</span>
+                        <img src="IMG/fitn.png" alt="" class="placeholder-img">
+                    </div> 
+                    <span class="pfull-category">Fitness</span>
+                </div> 
+
+                <div class="pfull-body">
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">TailwindCSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <h3>Cours fitness en ligne - G-Kub</h3> 
+                    <p>Site web pour un gymnase avec plan de cours et réservation en ligne.</p> 
+                    <div class="pfull-links">
+                        <a href="#" class="btn-primary btn-sm">Voir le site →</a> 
+                        <a href="#" class="btn-ghost btn-sm">Code source</a>
+                    </div>
+                </div>
+            </article>
+         </div>
+    </section>
+
+    <!-- ==== FOOTER ==== --> 
+    <footer class="footer"> 
+        <span>© 2026 Gloire KUBEMBULA</span> 
+        <div class="footer-links">
+            <a href="#">GitHub</a>
+            <a href="#">NetLify</a>
+        </div>
+    </footer>
+</body>
+</html>
