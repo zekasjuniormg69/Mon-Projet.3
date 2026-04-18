@@ -123,7 +123,7 @@ img {
 } 
 
 .logo {
-  font-family: var(--fonte-titre);
+  font-family: var(--font-titre);
   font-size: 22px;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -300,7 +300,7 @@ h2 {
   padding: 28px;
 }
 .project-info h3 {
-  font-family: var(--fonte-titre);
+  font-family: var(--font-titre);
   font-size: 22px;
   font-weight: 400;
   margin: 10px 0 10px;
@@ -319,8 +319,8 @@ h2 {
   margin-bottom: 8px;
 }
 .tag {
-  background: var(--couleur-tag-bg);
-  color: var(--couleur-tag-txt);
+  background: var(--color-tag-bg);
+  color: var(--color-tag-txt);
   font-size: 12px;
   font-weight: 500;
   padding: 4px 10px;
@@ -333,27 +333,27 @@ h2 {
 .about-strip {
   font-size: 32px;
   font-weight: 400;
-  font-family: var(--fonte-titre);
+  font-family: var(--font-titre);
   line-height: 1.5; 
   letter-spacing: -1.5px;
   text-align: center;
-  background: var(--couleur-carte); 
+  background: var(--color-fond); 
   margin-top: 30px;
 }
 .about-strip-text h2 { margin-bottom: 16px; }
-.about-strip-text p  { color: var(--couleur-texte-secondary); margin-bottom: 24px; }
+.about-strip-text p  { color: var(--color-text-secondary); margin-bottom: 24px; }
 .about-strip-stats {
   display: flex;
 }
 .stat { display: flex; flex-direction: column; }
 .stat-num {
-  font-family: var(--fonte-titre);
+  font-family: var(--font-titre);
   font-size: 40px;
   font-weight: 400;
-  color: var(--couleur-accent);
+  color: var(--color-logo);
   line-height: 1;
 }
-.stat-label { font-size: 13px; color: var(--couleur-texte-secondary); margin-top: 4px; } 
+.stat-label { font-size: 13px; color: var(--color-text-secondary); margin-top: 4px; } 
 
 /* ---- CONTACT (accueil) ---- */
 #contact{} 
@@ -420,11 +420,11 @@ h2 {
   align-items: center;
   padding: 28px 40px;
   font-size: 14px;
-  color: var(--couleur-texte-doux);
+  color: var(--color-text-secondary);
   max-width: 100%;
 }
 .footer-links { display: flex; gap: 24px; }
-.footer-links a:hover { color: var(--couleur-texte); }
+.footer-links a:hover { color: var(--color-text-primary); }
 
 @media (max-width: 768px) {
     .bar {
@@ -450,12 +450,15 @@ h2 {
     .about-strip {
         grid-template-columns: 1fr; gap: 15px; 
     } 
+
     .about-intro {
         grid-template-columns: 1fr; 
     } 
+
     .about-photo {
         position: static; 
     } 
+
     .photo-placeholder {
         aspect-ratio: 16/9;
     } 
@@ -463,9 +466,11 @@ h2 {
     .projects-full-grid {
         grid-template-columns: 1fr; 
     } 
+
     .skills-grid {
         grid-template-columns: 1fr;
-    } 
+    }
+    
     .hobbies-grid {
         grid-template-columns: 1fr 1fr; 
     } 
@@ -489,5 +494,9 @@ h2 {
 
     .footer {
         flex-direction: column; gap: 12px; text-align: center;
+    } 
+
+    .contact-footer {
+        flex-direction: column; gap: 20px; align-items: center; text-align: center;
     }
 }

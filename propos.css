@@ -123,7 +123,7 @@ img {
 } 
 
 .logo {
-  font-family: var(--fonte-titre);
+  font-family: var(--font-titre);
   font-size: 22px;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -156,6 +156,183 @@ img {
     font-weight: 500;
 } 
 
+/* --------  -------- */ 
+.page-hero {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 72px 24px 48px;
+}
+
+.page-hero h1 {
+  font-family: var(--font-titre);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+
+}
+.page-hero .em { font-family: var(--font-contact); color: var(--color-logo); font-size: clamp(45px, 5vw, 80px); }
+.page-hero p { font-size: 18px; color: var(--color-texte-secondary); } 
+
+.about-intro {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: start;
+  padding: 40px;
+}
+
+.about-photo {
+  /* position: sticky; */
+  top: 100px;
+} 
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--color-fond);
+  border-radius: var(--rayon-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--color-text-secondary);
+} 
+
+.placeholder-photo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--rayon-lg);
+    object-fit: cover;
+    margin-top: 90px;
+}
+
+.photo-placeholder .placeholder-icon { font-size: 48px; }
+
+.about-bio h2 { margin-bottom: 20px; font-family: var(--font-titre); font-size: 40px; }
+.about-bio p {
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+.about-bio .btn-primary { margin-top: 8px; }
+
+/* -------- COMPÉTENCES -------- */
+.section { 
+    background: var(--color-fond);
+    width: 100%; 
+    margin: 0 auto; 
+    padding: var(--padding-section);
+}
+
+.section-title {
+    font-family: var(--font-titre); 
+    font-size: 32px; 
+    font-weight: 400; 
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skill-group h3 {
+  font-family: var(--font-titre);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+} 
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-list li {
+  display: grid;
+  grid-template-columns: 130px 1fr 80px;
+  align-items: center;
+  gap: 12px;
+} 
+
+.skill-name { 
+    font-size: 14px; 
+    font-weight: 500; 
+}
+
+.skill-bar {
+  height: 6px;
+  background: var(--color-tag-bg);
+  border-radius: 50px;
+  overflow: hidden;
+} 
+
+.skill-pct { font-size: 12px; color: var(--color-text-secondary); text-align: right; }
+
+.section {
+    padding: var(--padding-section);
+    position: relative; 
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-accent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-logo);
+  border: 3px solid var(--color-fond);
+}
+
+.timeline-date {
+  font-size: 13px;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-titre);
+  font-size: 20px;
+  font-weight: 400;
+  margin: 4px 0 2px;
+}
+.timeline-place { 
+    font-size: 14px; 
+    color: var(--color-text-secondary); 
+    margin-bottom: 8px; 
+}
+
+.timeline-content p {
+    font-size: 14px; 
+    color: var(--color-text-secondary); 
+}
+
 
 /* ----- FOOTER ----- */ 
 .footer {
@@ -164,11 +341,11 @@ img {
   align-items: center;
   padding: 28px 40px;
   font-size: 14px;
-  color: var(--couleur-texte-doux);
+  color: var(--color-texte-secondary);
   max-width: 100%;
 }
 .footer-links { display: flex; gap: 24px; }
-.footer-links a:hover { color: var(--couleur-texte); }
+.footer-links a:hover { color: var(--color-text-primary); }
 
 @media (max-width: 768px) {
     .bar {
